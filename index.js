@@ -29,7 +29,7 @@ client.once('ready', () => {
 client.on('messageCreate', async message => {
     if (message.author.bot) return; // Bỏ qua tin nhắn từ bot
 
-    const prefix = '!calc';
+    const prefix = '.ca';
     if (message.content.startsWith(prefix)) {
         const expression = message.content.slice(prefix.length).trim();
 
