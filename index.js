@@ -29,7 +29,7 @@ client.once('ready', () => {
 client.on('messageCreate', async message => {
     if (message.author.bot) return; // Bỏ qua tin nhắn từ bot
 
-    const prefix = '.ca';
+    const prefix = '.tinh';
     if (message.content.startsWith(prefix)) {
         const expression = message.content.slice(prefix.length).trim();
 
@@ -39,7 +39,7 @@ client.on('messageCreate', async message => {
 
         try {
             const result = math.evaluate(expression);
-            message.channel.send(`Kết quả: ${result}`);
+            message.channel.send(`💡Kết quả: **${result}**`);
         } catch (error) {
             message.channel.send('Biểu thức không hợp lệ. Hãy chắc chắn rằng bạn đã nhập đúng công thức toán học.');
         }
